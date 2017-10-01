@@ -27,11 +27,11 @@ app.get('/source-fragment', sourceFragment());
 app.use('/source-fragment', sourceFragment());
 
 // - to trigger middleware on *any* request method to *any* path
-//   (not recomended unless server's single purpose is to open files in editor)
+//   (not recommended unless server's single purpose is a serving of source fragments)
 app.use(sourceFragment());
 ```
 
-After that you can use `GET` requests like `/source-fragment?file=foo/bar.js:2:5:4:12` to get source fragment `foo/bar.js` that starts from line 2 column 5 and ends on line 4 column 12.
+After that you can use `GET` requests like `/source-fragment?file=foo/bar.js:2:5:4:12` to get a source fragment of `foo/bar.js` that starts on line 2 column 5 and ends on line 4 column 12.
 
 ### Using with webpack-dev-server
 
