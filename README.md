@@ -1,5 +1,6 @@
 [![NPM version](https://img.shields.io/npm/v/express-source-fragment.svg)](https://www.npmjs.com/package/express-source-fragment)
 [![Build Status](https://travis-ci.org/lahmatiy/express-source-fragment.svg?branch=master)](https://travis-ci.org/lahmatiy/express-source-fragment)
+[![Coverage Status](https://coveralls.io/repos/github/lahmatiy/express-source-fragment/badge.svg?branch=master)](https://coveralls.io/github/lahmatiy/express-source-fragment?branch=master)
 [![Dependency Status](https://img.shields.io/david/lahmatiy/express-source-fragment.svg)](https://david-dm.org/lahmatiy/express-source-fragment)
 
 Express middleware to get a file content fragment by request to defined route. Based on [source-fragment](https://github.com/lahmatiy/source-fragment).
