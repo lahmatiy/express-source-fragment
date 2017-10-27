@@ -20,7 +20,7 @@
     "README.md"
   ],
   "dependencies": {
-    "source-fragment": "^1.0.0"
+    "source-fragment": "^1.1.0"
   },
   "scripts": {
     "test": "mocha --reporter dot",

@@ -11,7 +11,7 @@ function fail(res, code, message) {
 
 module.exports = function(options) {
     var cwd = path.resolve((options && options.cwd) || process.cwd());
-    return function openInEditor(req, res, next) {
+    return function sourceFragment(req, res, next) {
         var queryLoc = url.parse(req.url, true).query.loc;
         var loc;
 
@@ -31,7 +31,10 @@ module.exports = function(options) {
         try {
             res.statusCode = 200;
             res.set('Content-Type', 'text/html; charset=utf-8');
-            res.end(sf(loc, { format: 'html' }));
+            res.end(sf(loc, {
+                format: 'html',
+                collapseOffset: true
+            }));
         } catch (e) {
             fail(res, 500, 'ERROR: ' + e);
         }
